@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;500;600;700;800;900&family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Capriola&display=swap");
+
+.products {
+  /* background: pink; */
+  margin: 2rem;
+  padding: 1rem;
+}
+.product .initial-pic {
+  display: flex;
+}
+
+.title {
+  font-family: Overpass;
+  margin-top: 1rem;
+  margin-right: 38rem;
+}
+.product-pic {
+  position: absolute;
+  right: 0;
+  top: 200px;
+}
+.details {
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 4rem 0 0 0rem;
+}
+.title2 {
+  font-family: Overpass;
+  margin-top: 3rem;
+  margin-right: 38rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+nav {
+  font-family: Montserrat;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 1rem;
+}
+ul {
+  list-style-type: none;
+}
+nav li {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 1rem;
+  float: left;
+  text-transform: capitalize;
+}
+nav li:hover {
+  cursor: pointer;
+  font-weight: 500;
+}
+nav button {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1rem;
+  background: #c7493a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1.4rem;
+  cursor: pointer;
+}
+nav button:hover {
+  font-weight: 500;
+  color: black;
+  background: white;
+  transform: scale(1.1);
+}
+.details {
+  font-size: 1.3rem;
+}
+footer {
+  position: relative;
+  width: 100%;
+  bottom: 0px;
+  margin-top: 5rem;
+  color: white;
+  background: #1a202c;
+  padding: 8rem 10rem;
+}
+.footerUp {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footerDown {
+  font-family: Montserrat;
+  font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+}
+.copy {
+  width: 60%;
+}
+.footHead {
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.list {
+  font-family: Montserrat;
+  font-weight: 200;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.hrline {
+  margin: 2rem 0 0.6rem 0;
+}
+.socials i {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+.fb:hover {
+  color: #31508a;
+}
+.ld:hover {
+  color: #0a66c2;
+}
+.insta:hover {
+  color: tomato;
+}
+.field {
+  display: grid;
+  grid-template-columns: auto auto;
+  font-family: Paytone one;
+  font-size: 1.4rem;
+}
+input {
+  font-family: Capriola;
+  width: 40rem;
+  height: 35px;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  padding-left: 0.6rem;
+  opacity: 0.8;
+}
+.submitbtn {
+  font-family: Paytone one;
+  font-size: 1.3rem;
+  border: none;
+  background: #689775;
+  color: black;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+.result {
+  margin-top: 4rem;
+}
+.res {
+  font-family: Paytone one;
+}
+.res2 {
+  font-family: Paytone one;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  font-size: 1.4rem;
+}
+.res2 button {
+  margin-top: 1rem;
+  background-color: red;
+}
+.review {
+  margin-top: 3rem;
+  margin: 3rem 50% 0 0;
+}
+.revdesc,
+.revname {
+  font-family: Overpass;
+  text-align: justify;
+}
+.revname {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.hostingform {
+  margin-top: 3rem;
+  /* margin-left: 3rem; */
+}
+.hostingform2 {
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+.useranalysis h2 {
+  font-family: Paytone One;
+  font-weight: 100;
+  font-size: 2rem;
+  margin: 3rem 0 0 3rem;
+  color: #a33327;
+}
+.bet {
+  display: inline-block;
+}
+.det2 {
+  margin-left: 3rem;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+}
+.det2 div {
+  margin-bottom: 0.4rem;
+  font-size: 1.4rem;
+}

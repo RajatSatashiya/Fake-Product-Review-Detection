@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Spam Detection</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/fakerev.css">
+</head>
+<body>
+    <nav>
+        <div class="navHead">
+            FakeProd
+        </div>
+        <ul>
+            <li>
+                <a href="{{ url_for('root')}}">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('fakerev')}}">
+                    Detect Review
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('spamdetection')}}">
+                    User Spam Detection
+                </a>
+            </li>
+        </ul>
+        <button>Login</button>
+    </nav>
+
+    <h1 class="spamLanding">User Spam Detection</h1>
+
+    <form class="hostingform2" action="{{ url_for('spamdetection') }}" method="post">
+        <div class="field">
+            <div>
+                <label for="name">Username</label><br>
+                <input type="text" name="name" placeholder="e.g. John Travolta"><br>
+            </div>
+        </div>
+        <button type="submit" class="submitbtn">Perform detection</button>
+    </form>
+
+    <div class="useranalysis">
+        <h2 class="title2 t2size">User Analysis</h2>
+        {% if spam_text == 0 %}
+        <div class="det2">User Not Available</div>
+        {% else %}
+        <div class="det2">
+            <div><b>Name: </b> {{spam_text.name}}</div>
+            <div><b>Total Reviews: </b> {{spam_text.review}}</div>
+            <div><b>Flagged Reviews: </b> {{spam_text.flagged}}</div>
+            <div><b>Year Joined: </b> {{spam_text.year}}</div>
+        </div>
+
+        {% endif %}
+
+        {% if spam_text.value == False %}
+        <div class="res2">User {{spam_text.name}} is spamming the website.<br> Perform necessary actions by clicking on the button below
+            <button type="button" class="submitbtn">Delete or ban the user</button>
+        </div>
+
+        {% endif %}
+    </div>
+    
+</body>
+</html>

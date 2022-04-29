@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeRev</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/fakerev.css">
+</head>
+<body>
+    <nav>
+        <div class="navHead">
+            FakeProd
+        </div>
+        <ul>
+            <li>
+                <a href="{{ url_for('root')}}">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('fakerev')}}">
+                    Detect Review
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('spamdetection')}}">
+                    User Spam Detection
+                </a>
+            </li>
+        </ul>
+        <button>Login</button>
+    </nav>
+
+    <div class="products">
+        <div class="product">
+            <h1 class="title">Sony Bravia 108 cm (43 inches) Full HD Smart LED TV KDL-43W6603 (Black) (2020 Model)</h1>
+            <img src="https://m.media-amazon.com/images/I/81lpllAGcBL._SX522_.jpg" class="product-pic">
+
+            <div class="details">
+                <span>MRP:</span> <strike>₹44,000/-</strike> <br>
+                <span>Price:</span> ₹34,500/-<br>
+                EMI Options Available
+            </div>
+
+            <h2 class="title2">About this item</h2>
+            <div class="desc">Resolution: Full HD (1920x1080) | HDR
+            Connectivity: 2 HDMI ports to connect set top box, Blu Ray players, <br>gaming console | 2 USB ports to connect hard drives
+            and other USB devices 
+            Sound : 20 Watts Output<br> Open Baffle Speaker | ClearAudio+ technology | TV MusicBox <br>
+            Smart TV Features: Smart TV | Screen Mirroring | Netflix | Amazon Prime Video | HDR Gaming <br>
+            Display: HDR | X-Reality Pro | Motionflow XR 100 <br>
+            Warranty Information: 3 year warranty provided by the manufacture from the date of purchase <br> (Included 1 Year
+            Comprehensive and 2 Year Additional warranty on Panel).</div>
+
+            <div class="landingView">
+                Review the product
+            </div>
+            <div class="host">
+                <form class="hostingform" name="thename" action="{{ url_for('predict')}}" autocomplete="off" method="post">
+                    <div class="field">
+                        <div>
+                            <label for="name">Name</label><br>
+                            <input type="text" name="name" placeholder="e.g. John Travolta"><br>
+                        </div>
+                        
+                        <div>
+                            <label for="rating">Rating</label><br>
+                            <input type="number" name="rating" min=1 max=5 placeholder="e.g. 3 stars"><br>
+                        </div>
+                        
+                        <div>
+                            <label for="review">Review</label><br>
+                            <input type="text" name="review" placeholder="e.g. the tv is not good"><br>
+                        </div>
+                    </div>
+                    <button type="submit" class="submitbtn" onclick="addReview()">Publish review</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="review">
+            <div class="revdesc"></div>
+            <div class="revname"></div>
+        </div>
+        <div class="result">
+            <div class="landingView">Review Validation</div>
+            {% if prediction_text == -1 %}
+            <div class="res">
+                The review is fake.
+                <button type="button" class="submitbtn">Delete the review</button>
+            </div>
+            {% elif prediction_text == 1 %}
+            <div class="res">The review is original.</div>
+            {% else %}
+            <div class="res">Results will be visible soon...</div>
+            {% endif %}
+        </div>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>

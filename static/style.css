@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;500;600;700;800;900&family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Capriola&display=swap");
+
+:root {
+  --bg-clr-1: #353333;
+  --bg-clr-2: #35363a;
+  --bg-clr-3: #f1f5f8;
+  --bg-clr-4: #1a1a1d;
+  --bg-clr-5: #fccc47;
+  --bg-clr-6: #ee5743;
+  --bg-clr-7: hsl(210, 50%, 14%);
+  --bg-clr-8: #d2dbdc;
+  --german-red: #d60000;
+  --german-yellow: #f7c800;
+  --shadow-cyan-1: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px cyan;
+  --shadow-cyan-2: 0 0 5px #fff, 0 0 10px cyan, 0 0 20px cyan;
+  --shadow-cyan-3: 0 0 20px cyan, 0 0 30px cyan;
+  --shadow-red-1: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px red, 0 0 30px red;
+  --shadow-red-2: 0 0 20px red, 0 0 30px red;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+nav {
+  font-family: Montserrat;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 1rem;
+}
+ul {
+  list-style-type: none;
+}
+nav li {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 1rem;
+  float: left;
+  text-transform: capitalize;
+}
+nav li:hover {
+  cursor: pointer;
+  font-weight: 500;
+}
+nav button {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1rem;
+  background: #c7493a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1.4rem;
+  cursor: pointer;
+}
+nav button:hover {
+  font-weight: 500;
+  color: black;
+  background: white;
+  transform: scale(1.1);
+}
+main {
+  text-align: center;
+}
+main div {
+  font-family: Capriola;
+  color: #6b574e;
+}
+.landingView {
+  font-family: Paytone One;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #a33327;
+  margin: 3rem 0 0 0;
+}
+.spamLanding {
+  font-family: Paytone One;
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #a33327;
+  margin: 3rem 0 0 3rem;
+}
+.tabs {
+  display: flex;
+  margin: 4rem 1rem;
+  justify-content: space-evenly;
+}
+.tab {
+  width: 30%;
+  height: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ecb453;
+  position: relative;
+  transition: 0.6s ease;
+}
+.tab img {
+  width: 100%;
+  aspect-ratio: 1.5;
+  /* height: 16.25rem; */
+}
+.tab:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.tag {
+  position: absolute;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  top: 10px;
+  left: -5px;
+  padding: 5px 0;
+  padding-left: 8px;
+  background: #917164;
+  border-radius: 5px;
+  color: white;
+  width: 30%;
+}
+.content {
+  color: black;
+  font-family: Paytone One;
+  position: absolute;
+  font-size: 32px;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+.desc {
+  font-family: Capriola;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0.4rem 0;
+}
+.whypanel {
+  padding: 7rem 4rem;
+  background: #eff0b3;
+  overflow: hidden;
+}
+.team {
+  margin-top: 0;
+  padding-bottom: 10rem;
+  background: #689775;
+}
+.members {
+  display: flex;
+  text-align: center;
+  font-family: Capriola;
+  font-weight: bold;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.profilepic {
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-bottom: 0.7rem;
+}
+.pic1 {
+  background: url("profile pics/rajat.jpg");
+  background-size: cover;
+}
+.pic2 {
+  background: url("profile pics/rachit.jpeg");
+  background-size: cover;
+}
+.pic3 {
+  background: url("profile pics/ujjwal.jpeg");
+  background-size: cover;
+}
+.pic4 {
+  background: url("profile pics/kush.jpeg");
+  background-size: cover;
+}
+.pic5 {
+  background: url("profile pics/ayushman.jpeg");
+  background-size: cover;
+}
+.topic {
+  font-family: Paytone One;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.description {
+  font-family: Capriola;
+  font-size: 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.description ul {
+  list-style-type: square;
+}
+.description ul li {
+  margin: 0.8rem 0;
+}
+.houseimg {
+  position: absolute;
+  right: -100px;
+  bottom: -220px;
+  width: 56%;
+}
+footer {
+  color: white;
+  background: #1a202c;
+  padding: 8rem 10rem;
+}
+.footerUp {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footerDown {
+  font-family: Montserrat;
+  font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+}
+.copy {
+  width: 60%;
+}
+.footHead {
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.list {
+  font-family: Montserrat;
+  font-weight: 200;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.hrline {
+  margin: 2rem 0 0.6rem 0;
+}
+.socials i {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+.fb:hover {
+  color: #31508a;
+}
+.ld:hover {
+  color: #0a66c2;
+}
+.insta:hover {
+  color: tomato;
+}
+/****** Responsive - Mobile  ******/
+@media screen and (max-width: 650px) {
+  .tabs {
+    flex-direction: column;
+  }
+  .tab {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  footer {
+    padding: 1.5rem;
+  }
+  .footerUp div {
+    margin: 0.5rem;
+  }
+  .footerDown {
+    font-size: 0.9rem;
+  }
+  .socials i {
+    font-size: 1.4rem;
+    margin: 4px;
+  }
+  .footHead {
+    font-size: 0.8rem;
+  }
+  .list {
+    font-size: 0.8rem;
+  }
+  .members {
+    justify-content: center;
+  }
+  .member {
+    margin: 1rem;
+  }
+  .topic {
+    text-align: center;
+  }
+  .profilepic {
+    width: 100px;
+  }
+}
